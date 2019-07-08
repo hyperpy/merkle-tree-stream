@@ -1,8 +1,8 @@
 .. _header:
 
-************************
+******************
 merkle-tree-stream
-************************
+******************
 
 .. image:: https://img.shields.io/badge/license-MIT-brightgreen.svg
    :target: LICENSE

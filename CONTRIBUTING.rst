@@ -53,12 +53,6 @@ Make a new release tag:
     $ git tag x.x.x
     $ git push --tags
 
-If you have a development install locally, you can verify:
-
-.. code-block:: bash
-
-    $ merkle-tree-stream --version
-
 Then run the release process:
 
 .. code-block:: bash

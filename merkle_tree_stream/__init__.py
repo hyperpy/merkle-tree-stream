@@ -7,6 +7,6 @@ except ImportError:
 
 
 try:
-    __version__ = pkg_resources.get_distribution('merkle-tree-stream').version
+    __version__ = pkg_resources.get_distribution('merkle_tree_stream').version
 except Exception:
     __version__ = 'unknown'
