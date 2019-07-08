@@ -7,6 +7,8 @@ Table of Contents
 .. toctree::
 
    install
+   modules-api
+   other-impls
    contribute
    changelog
    code-of-conduct
