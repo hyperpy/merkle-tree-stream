@@ -1,8 +1,8 @@
 .. include:: ../../README.rst
   :end-before: _documentation
 
-Contents:
-=========
+Table of Contents
+*****************
 
 .. toctree::
 
