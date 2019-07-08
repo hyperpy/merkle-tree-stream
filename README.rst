@@ -25,6 +25,26 @@ merkle-tree-stream
 A stream that generates a merkle tree based on the incoming data
 ----------------------------------------------------------------
 
+From `The Dat Protocol`_: 
+
+.. _The Dat Protocol: https://datprotocol.github.io/book/ch01-01-flat-tree.html
+
+    A merkle tree is a hash tree or Merkle tree is a tree in which every leaf
+    node is labelled with the hash of a data block and every non-leaf node is
+    labelled with the cryptographic hash of the labels of its child nodes.
+    Merkle Trees in Dat are specialized `Flat Trees`_ that contain the content
+    of the archives.
+
+    .. _Flat Trees: https://flat-tree.readthedocs.io/en/latest/
+
+See the following for more:
+
+  * The Dat Protocol: `Merkle Tree`_
+  * The Dat Protocol: `Merkle Tree Stream`_
+
+.. _Merkle Tree: https://datprotocol.github.io/book/ch01-02-merkle-tree.html
+.. _Merkle Tree Stream: https://datprotocol.github.io/book/ch02-02-merkle-tree-stream.html
+
 .. _documentation:
 
 Documentation
