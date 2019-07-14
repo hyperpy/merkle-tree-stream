@@ -1,5 +1,10 @@
 """merkle-tree-stream module."""
 
+from merkle_tree_stream.generator import (  # noqa
+    MerkleTreeGenerator,
+    MerkleTreeNode,
+)
+
 try:
     import pkg_resources
 except ImportError:
