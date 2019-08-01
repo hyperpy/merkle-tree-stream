@@ -4,5 +4,5 @@
 Modules API
 ***********
 
-.. automodule:: merkle_tree_stream.generator
+.. automodule:: merkle_tree_stream.generate
    :members:
