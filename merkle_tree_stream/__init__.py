@@ -1,7 +1,7 @@
 """merkle-tree-stream module."""
 
-from merkle_tree_stream.generator import (  # noqa
-    MerkleTreeGenerator,
+from merkle_tree_stream.generate import (  # noqa
+    MerkleTreeIterator,
     MerkleTreeNode,
 )
 
