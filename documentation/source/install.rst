@@ -1,6 +1,6 @@
-************
-Installation
-************
+*******
+Install
+*******
 
 .. code-block:: bash
 

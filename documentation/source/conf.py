@@ -5,3 +5,4 @@ html_theme = 'alabaster'
 master_doc = 'index'
 project = 'merkle-tree-stream'
 templates_path = ['_templates']
+extensions = ['sphinx.ext.autodoc', 'sphinx_autodoc_typehints']
