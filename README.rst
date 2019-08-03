@@ -29,11 +29,10 @@ From `The Dat Protocol`_:
 
 .. _The Dat Protocol: https://datprotocol.github.io/book/ch01-01-flat-tree.html
 
-    A merkle tree is a hash tree or Merkle tree is a tree in which every leaf
-    node is labelled with the hash of a data block and every non-leaf node is
-    labelled with the cryptographic hash of the labels of its child nodes.
-    Merkle Trees in Dat are specialized `Flat Trees`_ that contain the content
-    of the archives.
+    A hash tree or merkle tree is a tree in which every leaf node is labelled
+    with the hash of a data block and every non-leaf node is labelled with the
+    cryptographic hash of the labels of its child nodes. Merkle trees in Dat
+    are specialized `flat trees`_ that contain the content of the archives.
 
     .. _Flat Trees: https://flat-tree.readthedocs.io/en/latest/
 
