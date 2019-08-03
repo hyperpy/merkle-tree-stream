@@ -59,3 +59,9 @@ By participating in the merkle-tree-stream community, you agree on the
 following code of conduct. Please see `CODE_OF_CONDUCT`_ for the full text.
 
 .. _CODE_OF_CONDUCT: ./CODE_OF_CONDUCT
+
+Mirroring
+*********
+
+* https://hack.decentral1.se/datpy/merkle-tree-stream (primary)
+* https://github.com/datpy/merkle-tree-stream
