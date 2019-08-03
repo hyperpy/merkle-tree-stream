@@ -12,6 +12,10 @@ merkle-tree-stream
    :target: https://badge.fury.io/py/merkle-tree-stream
    :alt: PyPI package
 
+.. image:: https://travis-ci.com/datpy/merkle-tree-stream.svg?branch=master
+   :target: https://travis-ci.com/datpy/merkle-tree-stream
+   :alt: Travis CI result
+
 .. image:: https://readthedocs.org/projects/merkle-tree-stream/badge/?version=latest
    :target: https://merkle-tree-stream.readthedocs.io/en/latest/
    :alt: Documentation status
