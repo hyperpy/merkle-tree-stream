@@ -48,6 +48,19 @@ See the following for more:
 .. _Merkle Tree: https://datprotocol.github.io/book/ch01-02-merkle-tree.html
 .. _Merkle Tree Stream: https://datprotocol.github.io/book/ch02-02-merkle-tree-stream.html
 
+A note on naming
+================
+
+For the purposes of uniformity and easy of discovery alongside the reference
+implementation, we use the same module name as `merkle-tree-stream`_. This may
+cause confusion since it is not clear what exactly is referred to when using
+the term "stream" in the context of Python. To be clear, this module provides a
+`Python iterator`_ which appears to match the implementation and meaning of the
+reference implementation.
+
+.. _merkle-tree-stream: https://github.com/mafintosh/merkle-tree-stream
+.. _a Python Iterator: https://docs.python.org/3/c-api/iter.html
+
 .. _documentation:
 
 Documentation

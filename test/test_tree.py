@@ -1,4 +1,4 @@
-"""Merkle tree generation test module."""
+"""Merkle tree test module."""
 
 import hashlib
 

@@ -1,9 +1,7 @@
 """merkle-tree-stream module."""
 
-from merkle_tree_stream.generate import (  # noqa
-    MerkleTreeIterator,
-    MerkleTreeNode,
-)
+from merkle_tree_stream.node import MerkleTreeNode  # noqa
+from merkle_tree_stream.tree import MerkleTreeIterator  # noqa
 
 try:
     import pkg_resources

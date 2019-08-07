@@ -1,42 +1,25 @@
-"""The merkle tree stream generator."""
+"""A merkle tree iterator."""
 
-from typing import Any, Callable, Iterator, List, Optional
+from typing import Any, Callable, Iterator, List
 
 import attr
 from flat_tree import FlatTreeAccessor
 
+from merkle_tree_stream.node import MerkleTreeNode
+
 Hash = str
 
-__all__ = ['MerkleTreeIterator', 'MerkleTreeNode']
+EMPTY_DATA = b''
+EMPTY_HASH = None
+
+__all__ = ['MerkleTreeIterator']
 
 flat_tree = FlatTreeAccessor()
 
 
 @attr.s(auto_attribs=True)
-class MerkleTreeNode:
-    """A node in a merkle tree.
-
-    :param index: The index of node
-    :param parent: The parent of the node
-    :param size: The size of the data
-    :param data: The data of the node
-    :param hash: The hash of the data
-    """
-
-    index: int
-    parent: int
-    size: int
-    data: bytes
-    hash: Optional[str] = None
-
-    def __attrs_post_init__(self) -> Any:
-        """Initialise the parent index."""
-        self.parent = flat_tree.parent(self.index)
-
-
-@attr.s(auto_attribs=True)
 class MerkleTreeIterator:
-    """A merkle tree iterator based on incoming data.
+    """A merkle tree iterator.
 
     :param leaf: The leaf hash generation function
     :param parent: The parent hash generation function
@@ -83,8 +66,10 @@ class MerkleTreeIterator:
         """The number of nodes stored in the tree."""
         return len(self._nodes)
 
+    # TODO(decentral1se): we need to take pass on async capability. Please see
+    # https://datprotocol.github.io/book/ch02-02-merkle-tree-stream.html#async
     def write(self, data: bytes):
-        """Write a new node to the tree.
+        """Write a new node to the tree and compute the new hashes.
 
         :param data: The new tree data
         """
@@ -95,7 +80,7 @@ class MerkleTreeIterator:
         leaf_node = MerkleTreeNode(
             index=index,
             parent=flat_tree.parent(index),
-            hash=None,
+            hash=EMPTY_HASH,
             data=data,
             size=len(data),
         )
@@ -118,7 +103,7 @@ class MerkleTreeIterator:
                 parent=flat_tree.parent(left.parent),
                 hash=self.parent(left, right),
                 size=left.size + right.size,
-                data=b'',
+                data=EMPTY_DATA,
             )
 
             self.roots[len(self.roots) - 1] = new_node
