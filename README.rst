@@ -59,7 +59,7 @@ the term "stream" in the context of Python. To be clear, this module provides a
 reference implementation.
 
 .. _merkle-tree-stream: https://github.com/mafintosh/merkle-tree-stream
-.. _a Python Iterator: https://docs.python.org/3/c-api/iter.html
+.. _Python iterator: https://docs.python.org/3/c-api/iter.html
 
 .. _documentation:
 
