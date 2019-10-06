@@ -7,8 +7,6 @@ from flat_tree import FlatTreeAccessor
 
 from merkle_tree_stream.node import MerkleTreeNode
 
-Hash = str
-
 EMPTY_DATA = b''
 EMPTY_HASH = None
 
@@ -26,8 +24,8 @@ class MerkleTreeIterator:
     :param roots: The tree roots
     """
 
-    leaf: Callable[[MerkleTreeNode], Hash]
-    parent: Callable[[MerkleTreeNode, MerkleTreeNode], Hash]
+    leaf: Callable[[MerkleTreeNode], bytes]
+    parent: Callable[[MerkleTreeNode, MerkleTreeNode], bytes]
     roots: List[MerkleTreeNode] = attr.Factory(list)
 
     _position: int = 0

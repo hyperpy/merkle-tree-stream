@@ -23,7 +23,7 @@ class MerkleTreeNode:
     parent: int
     size: int
     data: bytes
-    hash: Optional[str] = attr.Factory(str)
+    hash: Optional[bytes] = attr.Factory(bytes)
 
     def __attrs_post_init__(self) -> Any:
         """Initialise the parent index."""
