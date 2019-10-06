@@ -1,13 +1,9 @@
 Get started
 -----------
 
-Install `Tox`_ with:
+Install `Tox`_.
 
 .. _tox: http://tox.readthedocs.io/
-
-.. code-block:: bash
-
-    $ pip install --user tox
 
 Run tests
 ---------
@@ -40,22 +36,6 @@ Type check source
 Release Process
 ---------------
 
-Add a change entry and re-generate the changelog:
-
 .. code-block:: bash
 
-    $ towncrier
-
-Make a new release tag:
-
-.. code-block:: bash
-
-    $ git tag x.x.x
-    $ git push --tags
-
-Then run the release process:
-
-.. code-block:: bash
-
-    $ tox -e metadata-release
     $ tox -e release

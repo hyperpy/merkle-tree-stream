@@ -6,7 +6,7 @@ import pytest
 @pytest.fixture
 def leaf():
     def _leaf(node, roots=None):
-        return hashlib.sha256(node.data).hexdigest()
+        return hashlib.sha256(node.data).digest()
 
     return _leaf
 
@@ -17,6 +17,6 @@ def parent():
         sha256 = hashlib.sha256()
         sha256.update(first.data)
         sha256.update(second.data)
-        return sha256.hexdigest()
+        return sha256.digest()
 
     return _parent

@@ -17,26 +17,18 @@ def test_hashes(leaf, parent):
     assert len(merkle_iter) == expected_count
 
     assert next(merkle_iter) == MerkleTreeNode(
-        index=0,
-        parent=1,
-        hash=hashlib.sha256(b'a').hexdigest(),
-        size=1,
-        data=b'a',
+        index=0, parent=1, hash=hashlib.sha256(b'a').digest(), size=1, data=b'a'
     )
 
     assert next(merkle_iter) == MerkleTreeNode(
-        index=2,
-        parent=1,
-        hash=hashlib.sha256(b'b').hexdigest(),
-        size=1,
-        data=b'b',
+        index=2, parent=1, hash=hashlib.sha256(b'b').digest(), size=1, data=b'b'
     )
 
     hashed = hashlib.sha256(b'a')
     hashed.update(b'b')
 
     assert next(merkle_iter) == MerkleTreeNode(
-        index=1, parent=3, hash=hashed.hexdigest(), size=2, data=b''
+        index=1, parent=3, hash=hashed.digest(), size=2, data=b''
     )
 
     with pytest.raises(StopIteration):
