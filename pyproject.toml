@@ -15,7 +15,7 @@ include = '\.pyi?$'
 [tool.towncrier]
 directory = "changelog/"
 filename = "CHANGELOG.rst"
-package = "merkle-tree-stream"
+package = "merkle_tree_stream"
 package_dir = "merkle_tree_stream"
 
   [[tool.towncrier.type]]
