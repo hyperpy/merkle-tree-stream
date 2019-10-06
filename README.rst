@@ -61,15 +61,42 @@ reference implementation.
 .. _merkle-tree-stream: https://github.com/mafintosh/merkle-tree-stream
 .. _Python iterator: https://docs.python.org/3/c-api/iter.html
 
+.. _example:
+
+.. code-block:: python
+
+    from hashlib import sha256
+    from merkle_tree_stream import MerkleTreeIterator
+
+
+    def leaf(node, roots=None):
+        return sha256(node.data).digest()
+
+    def parent(first, second):
+        sha256 = hashlib.sha256()
+        sha256.update(first.data)
+        sha256.update(second.data)
+        return sha256.digest()
+
+    merkle_iter = MerkleTreeIterator(leaf=leaf, parent=parent)
+    merkle_iter.write('hello')
+    merkle_iter.write('hashed')
+    merkle_iter.write('world')
+
 .. _documentation:
 
 Documentation
 *************
 
-* https://merkle-tree-stream.readthedocs.io/
+* `merkle-tree-stream.readthedocs.io`_
+
+.. _merkle-tree-stream.readthedocs.io: https://merkle-tree-stream.readthedocs.io/
 
 Mirroring
 *********
 
-* https://hack.decentral1.se/datpy/merkle-tree-stream (primary)
-* https://github.com/datpy/merkle-tree-stream
+* `hack.decentral1.se/datpy/merkle-tree-stream`_
+* `github.com/datpy/merkle-tree-stream`_
+
+.. _hack.decentral1.se/datpy/merkle-tree-stream: https://hack.decentral1.se/datpy/merkle-tree-stream
+.. _github.com/datpy/merkle-tree-stream: https://github.com/datpy/merkle-tree-stream
