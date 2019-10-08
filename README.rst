@@ -62,6 +62,9 @@ generator only. A `stream`_ implementation may follow.
 
 .. _example:
 
+Example
+*******
+
 .. code-block:: python
 
     from hashlib import sha256
