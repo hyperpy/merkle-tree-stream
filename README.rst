@@ -52,22 +52,20 @@ A note on naming
 ================
 
 For the purposes of uniformity and easy of discovery alongside the reference
-implementation, we use the same module name as `merkle-tree-stream`_. This may
-cause confusion since it is not clear what exactly is referred to when using
-the term "stream" in the context of Python. To be clear, this module provides a
-`Python iterator`_ which appears to match the implementation and meaning of the
-reference implementation.
+implementation, we use the same module name as `merkle-tree-stream`_. However,
+there is currently no stream implemented, only a generator is available. This
+is because the reference implementation of Hypercore 7 makes use of the
+generator only. A `stream`_ implementation may follow.
 
 .. _merkle-tree-stream: https://github.com/mafintosh/merkle-tree-stream
-.. _Python iterator: https://docs.python.org/3/c-api/iter.html
+.. _stream: https://docs.python.org/3/library/asyncio-stream.html
 
 .. _example:
 
 .. code-block:: python
 
     from hashlib import sha256
-    from merkle_tree_stream import MerkleTreeIterator
-
+    from merkle_tree_stream import MerkleTreeGenerator
 
     def leaf(node, roots=None):
         return sha256(node.data).digest()
@@ -78,10 +76,10 @@ reference implementation.
         sha256.update(second.data)
         return sha256.digest()
 
-    merkle_iter = MerkleTreeIterator(leaf=leaf, parent=parent)
-    merkle_iter.write('hello')
-    merkle_iter.write('hashed')
-    merkle_iter.write('world')
+    merkle = MerkleTreeGenerator(leaf=leaf, parent=parent)
+    merkle.write('hello')
+    merkle.write('hashed')
+    merkle.write('world')
 
 .. _documentation:
 

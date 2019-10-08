@@ -1,3 +1,12 @@
+Merkle_Tree_Stream 0.0.1a3 (2019-10-08)
+=======================================
+
+Bug Fixes
+---------
+
+- MerkleTreeIterator -> MerkleTreeGenerator
+
+
 Merkle_Tree_Stream 0.0.1a2 (2019-10-06)
 =======================================
 

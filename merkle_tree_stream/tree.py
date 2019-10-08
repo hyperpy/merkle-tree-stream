@@ -1,4 +1,4 @@
-"""A merkle tree iterator."""
+"""A merkle tree generator."""
 
 from typing import Any, Callable, Iterator, List
 
@@ -10,14 +10,14 @@ from merkle_tree_stream.node import MerkleTreeNode
 EMPTY_DATA = b''
 EMPTY_HASH = None
 
-__all__ = ['MerkleTreeIterator']
+__all__ = ['MerkleTreeGenerator']
 
 flat_tree = FlatTreeAccessor()
 
 
 @attr.s(auto_attribs=True)
-class MerkleTreeIterator:
-    """A merkle tree iterator.
+class MerkleTreeGenerator:
+    """A merkle tree generator.
 
     :param leaf: The leaf hash generation function
     :param parent: The parent hash generation function
