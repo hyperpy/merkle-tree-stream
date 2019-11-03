@@ -48,6 +48,10 @@ See the following for more:
 .. _Merkle Tree: https://datprotocol.github.io/book/ch01-02-merkle-tree.html
 .. _Merkle Tree Stream: https://datprotocol.github.io/book/ch02-02-merkle-tree-stream.html
 
+Part of the `Datpy`_ project.
+
+.. _Datpy: https://datpy.decentral1.se/
+
 A note on naming
 ================
 
@@ -60,30 +64,6 @@ generator only. A `stream`_ implementation may follow.
 .. _merkle-tree-stream: https://github.com/mafintosh/merkle-tree-stream
 .. _stream: https://docs.python.org/3/library/asyncio-stream.html
 
-.. _example:
-
-Example
-*******
-
-.. code-block:: python
-
-    from hashlib import sha256
-    from merkle_tree_stream import MerkleTreeGenerator
-
-    def leaf(node, roots=None):
-        return sha256(node.data).digest()
-
-    def parent(first, second):
-        sha256 = hashlib.sha256()
-        sha256.update(first.data)
-        sha256.update(second.data)
-        return sha256.digest()
-
-    merkle = MerkleTreeGenerator(leaf=leaf, parent=parent)
-    merkle.write('hello')
-    merkle.write('hashed')
-    merkle.write('world')
-
 .. _documentation:
 
 Documentation
@@ -92,12 +72,3 @@ Documentation
 * `merkle-tree-stream.readthedocs.io`_
 
 .. _merkle-tree-stream.readthedocs.io: https://merkle-tree-stream.readthedocs.io/
-
-Mirroring
-*********
-
-* `hack.decentral1.se/datpy/merkle-tree-stream`_
-* `github.com/datpy/merkle-tree-stream`_
-
-.. _hack.decentral1.se/datpy/merkle-tree-stream: https://hack.decentral1.se/datpy/merkle-tree-stream
-.. _github.com/datpy/merkle-tree-stream: https://github.com/datpy/merkle-tree-stream

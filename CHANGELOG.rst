@@ -1,3 +1,12 @@
+Merkle_Tree_Stream 0.0.1a4 (2019-11-03)
+=======================================
+
+Improved Documentation
+----------------------
+
+- New Sphinx theme. Improved clarity with documentation.
+
+
 Merkle_Tree_Stream 0.0.1a3 (2019-10-08)
 =======================================
 
