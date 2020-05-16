@@ -8,7 +8,7 @@
 $ pip install merkle-tree-stream
 ```
 
-A hash tree or merkle tree is a tree in which every leaf node is labelled
-with the hash of a data block and every non-leaf node is labelled with the
-cryptographic hash of the labels of its child nodes. Merkle trees in Dat
-are specialized `flat trees`\_ that contain the content of the archives.
+A hash tree or merkle tree is a tree in which every leaf node is labelled with
+the hash of a data block and every non-leaf node is labelled with the
+cryptographic hash of the labels of its child nodes. Merkle trees in Dat are
+specialized flat trees that contain the content of the archives.
