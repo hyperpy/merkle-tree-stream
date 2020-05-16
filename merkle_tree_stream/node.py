@@ -5,7 +5,7 @@ from typing import Any, Optional
 import attr
 from flat_tree import FlatTreeAccessor
 
-__all__ = ['MerkleTreeNode']
+__all__ = ["MerkleTreeNode"]
 
 
 @attr.s(auto_attribs=True)

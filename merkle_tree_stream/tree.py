@@ -7,10 +7,10 @@ from flat_tree import FlatTreeAccessor
 
 from merkle_tree_stream.node import MerkleTreeNode
 
-EMPTY_DATA = b''
+EMPTY_DATA = b""
 EMPTY_HASH = None
 
-__all__ = ['MerkleTreeGenerator']
+__all__ = ["MerkleTreeGenerator"]
 
 flat_tree = FlatTreeAccessor()
 
