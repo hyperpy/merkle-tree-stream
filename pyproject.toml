@@ -63,7 +63,7 @@ commands = flake8 {posargs:--max-line-length 80} merkle_tree_stream/ test/
 [testenv:sort]
 skipdist = True
 deps = isort
-commands = isort {posargs:-c} -sp setup.cfg merkle_tree_stream/ test/
+commands = isort {posargs:-c} merkle_tree_stream/ test/
 
 [testenv:format]
 skipdist = True
