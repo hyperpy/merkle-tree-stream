@@ -20,8 +20,12 @@ $ pip install merkle-tree-stream
 ```python
 import hashlib
 
+from merkle_tree_stream import MerkleTreeGenerator
+
+
 def _leaf(node, roots=None):
     return hashlib.sha256(node.data).digest()
+
 
 def _parent(first, second):
     sha256 = hashlib.sha256()
@@ -29,10 +33,21 @@ def _parent(first, second):
     sha256.update(second.data)
     return sha256.digest()
 
-merkle = MerkleTreeGenerator(leaf=leaf, parent=parent)
+
+merkle = MerkleTreeGenerator(leaf=_leaf, parent=_parent)
 
 merkle.write(b"a")
 merkle.write(b"b")
 
-assert len(merkle) == 2 + 1
+print(merkle._nodes)
+```
+
+Output:
+
+```sh
+[
+ MerkleTreeNode(index=0, parent=1, size=1, data=b'a', hash=b'...'),
+ MerkleTreeNode(index=2, parent=1, size=1, data=b'b', hash=b'...'),
+ MerkleTreeNode(index=1, parent=3, size=2, data=b'', hash=b'...')
+]
 ```
